@@ -1,0 +1,274 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body button {
+  font-weight: 700;
+  padding: 0;
+  margin: 0;
+}
+body h1 {
+  font-size: 48px;
+  line-height: 60px;
+}
+body h2 {
+  font-size: 36px;
+  line-height: 60px;
+}
+body h3 {
+  font-size: 20px;
+  line-height: 30px;
+}
+body h4 {
+  font-size: 16px;
+  line-height: 30px;
+}
+body h5,
+body button {
+  font-size: 14px;
+  line-height: 21px;
+}
+body p {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  width: 1140px;
+  margin: 0 auto;
+}
+
+.container_center {
+  text-align: center;
+}
+
+header {
+  height: 800px;
+  background: url("../../assets/image.png") no-repeat;
+  background-size: cover;
+  background-position: center top;
+}
+header .hamburger {
+  position: absolute;
+  top: 0;
+  right: 0;
+  flex-flow: column;
+  display: flex;
+  gap: 6px;
+  align-items: end;
+  margin: 20px 30px 0 0;
+}
+header .hamburger .hamburger__line {
+  width: 30px;
+  height: 3px;
+  background: black;
+}
+header .hamburger .line_short {
+  width: 30px;
+}
+header .hamburger .line_long {
+  width: 36px;
+}
+header .greeting {
+  flex-flow: column;
+  display: flex;
+  padding: 200px 0 0 0;
+}
+header .greeting h1 {
+  margin: 3px 0 25px;
+}
+header .greeting .greeting__buttons {
+  flex-flow: row;
+  display: flex;
+  gap: 20px;
+}
+header .social-media {
+  position: absolute;
+  left: 50px;
+  top: 226px;
+  flex-flow: column-reverse;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+header .social-media h4 {
+  writing-mode: vertical-rl;
+  transform: rotate(-180deg);
+}
+header .social-media span {
+  width: 2px;
+  height: 70px;
+  background: black;
+  border: 0;
+}
+header .social-media .social-media__icons {
+  flex-flow: column-reverse;
+  display: flex;
+  gap: 15px;
+}
+
+.text-with-circle {
+  flex-flow: row;
+  display: flex;
+  align-items: center;
+}
+.text-with-circle h4 {
+  position: relative;
+  top: 1px;
+  left: -25px;
+}
+
+.circle {
+  min-width: 36px;
+  min-height: 36px;
+  border-radius: 100%;
+  background: #ffa501;
+}
+
+.circle-small {
+  min-width: 15px;
+  min-height: 15px;
+  border-radius: 100%;
+  background: #ffa501;
+}
+
+.btn {
+  font-weight: 700;
+  font-size: 14px;
+  margin: 0;
+  padding: 12px 25px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.btn_orange {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  background: rgb(255, 165, 1);
+}
+
+main {
+  flex-flow: column;
+  display: flex;
+}
+main section {
+  margin: 120px 0 0 0;
+}
+main .experience {
+  flex-flow: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .experience h2 {
+  margin: 0 0 25px;
+}
+main .experience hr {
+  width: 60px;
+  height: 3px;
+  background: #ffa501;
+  border: 0;
+}
+main .experience .experience_sections {
+  flex-flow: row;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 60px 0 0 0;
+  gap: 20px;
+}
+main .experience .experience_sections .experience__education,
+main .experience .experience_sections .experience__work {
+  flex-flow: row;
+  display: flex;
+}
+main .experience .experience_sections .experience__line-vertical {
+  min-height: 100%;
+  flex-flow: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .experience .experience_sections .experience__line-vertical .circle-small {
+  margin: 9px 0 0 0;
+}
+main .experience .experience_sections .experience__education__text {
+  flex-flow: column;
+  display: flex;
+  gap: 45px;
+  position: relative;
+  align-items: start;
+  left: -8px;
+}
+main .experience .experience_sections .experience__education__text h3 {
+  padding: 0 0 0 42px;
+}
+main .experience .experience_sections .experience__education__text .experience__education__element {
+  flex-flow: column;
+  display: flex;
+}
+main .experience .experience_sections .experience__education__text .experience__education__element .element-heading {
+  flex-flow: row;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+main .experience .experience_sections .experience__education__text .experience__education__element .element-heading .element-heading__image {
+  flex-flow: row;
+  display: flex;
+}
+main .experience .experience_sections .experience__education__text .experience__education__element .element-heading .element-heading__image img {
+  position: relative;
+  top: 8px;
+  left: -35%;
+}
+main .experience .experience_sections .experience__education__text .experience__education__element .element-heading .element-heading__text {
+  flex-flow: column;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+}
+main .experience .experience_sections .experience__education__text .element-text {
+  margin: 12px 0 0 42px;
+  text-align: start;
+  width: 375px;
+}
+
+.text-with-circle_center {
+  flex-flow: row;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 0 0 36px;
+}
+.text-with-circle_center span {
+  z-index: 1;
+}
+.text-with-circle_center h4 {
+  position: relative;
+  left: -50%;
+  z-index: 2;
+}
+
+.line {
+  background: black;
+}
+
+.line_vertical {
+  width: 1px;
+  height: 100%;
+}
+
+.line_horizontal {
+  width: 42px;
+  height: 1px;
+}
