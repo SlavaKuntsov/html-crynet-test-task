@@ -34,7 +34,7 @@ body button {
   font-size: 14px;
   line-height: 21px;
 }
-body p {
+body p, body input, body textarea {
   font-size: 12px;
   font-weight: 500;
   line-height: 18px;
@@ -160,26 +160,22 @@ header .social-media .social-media__icons {
 main {
   flex-flow: column;
   display: flex;
+  padding: 0 0 20px 0;
 }
 main section {
   margin: 120px 0 0 0;
 }
-main .experience {
+
+.experience {
   flex-flow: column;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-main .experience h2 {
+.experience h2 {
   margin: 0 0 25px;
 }
-main .experience hr {
-  width: 60px;
-  height: 3px;
-  background: #ffa501;
-  border: 0;
-}
-main .experience .experience_sections {
+.experience .experience_sections {
   flex-flow: row;
   display: flex;
   justify-content: space-evenly;
@@ -187,22 +183,22 @@ main .experience .experience_sections {
   margin: 60px 0 0 0;
   gap: 20px;
 }
-main .experience .experience_sections .experience__education,
-main .experience .experience_sections .experience__work {
+.experience .experience_sections .experience__education,
+.experience .experience_sections .experience__work {
   flex-flow: row;
   display: flex;
 }
-main .experience .experience_sections .experience__line-vertical {
+.experience .experience_sections .experience__line-vertical {
   min-height: 100%;
   flex-flow: column;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-main .experience .experience_sections .experience__line-vertical .circle-small {
+.experience .experience_sections .experience__line-vertical .circle-small {
   margin: 9px 0 0 0;
 }
-main .experience .experience_sections .experience__education__text {
+.experience .experience_sections .experience__education__text {
   flex-flow: column;
   display: flex;
   gap: 45px;
@@ -210,38 +206,45 @@ main .experience .experience_sections .experience__education__text {
   align-items: start;
   left: -8px;
 }
-main .experience .experience_sections .experience__education__text h3 {
+.experience .experience_sections .experience__education__text h3 {
   padding: 0 0 0 42px;
 }
-main .experience .experience_sections .experience__education__text .experience__education__element {
+.experience .experience_sections .experience__education__text .experience__education__element {
   flex-flow: column;
   display: flex;
 }
-main .experience .experience_sections .experience__education__text .experience__education__element .element-heading {
+.experience .experience_sections .experience__education__text .experience__education__element .element-heading {
   flex-flow: row;
   display: flex;
   align-items: center;
   justify-content: start;
 }
-main .experience .experience_sections .experience__education__text .experience__education__element .element-heading .element-heading__image {
+.experience .experience_sections .experience__education__text .experience__education__element .element-heading .element-heading__image {
   flex-flow: row;
   display: flex;
 }
-main .experience .experience_sections .experience__education__text .experience__education__element .element-heading .element-heading__image img {
+.experience .experience_sections .experience__education__text .experience__education__element .element-heading .element-heading__image img {
   position: relative;
   top: 8px;
   left: -35%;
 }
-main .experience .experience_sections .experience__education__text .experience__education__element .element-heading .element-heading__text {
+.experience .experience_sections .experience__education__text .experience__education__element .element-heading .element-heading__text {
   flex-flow: column;
   display: flex;
   align-items: start;
   justify-content: center;
 }
-main .experience .experience_sections .experience__education__text .element-text {
+.experience .experience_sections .experience__education__text .element-text {
   margin: 12px 0 0 42px;
   text-align: start;
   width: 375px;
+}
+
+.heading-line_orange {
+  width: 60px;
+  height: 3px;
+  background: #ffa501;
+  border: 0;
 }
 
 .text-with-circle_center {
@@ -271,4 +274,97 @@ main .experience .experience_sections .experience__education__text .element-text
 .line_horizontal {
   width: 42px;
   height: 1px;
+}
+
+.contacts {
+  flex-flow: row;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 30px;
+  padding: 0 50px;
+}
+.contacts .contacts__image {
+  background: url("../../assets/contacts.png") no-repeat;
+  background-size: cover;
+  background-position: center top;
+  width: 400px;
+  height: 600px;
+}
+.contacts img.contacts__image {
+  height: 100%;
+}
+.contacts .contacts__form {
+  height: 100%;
+  flex-flow: column;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+.contacts .contacts__form h5 {
+  padding: 20px 0;
+}
+.contacts .contacts__form .contacts__form__social-media {
+  flex-flow: row;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+.contacts .contacts__form form {
+  flex-flow: column;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+.contacts .contacts__form form .form {
+  width: 100%;
+  flex-flow: wrap;
+  display: flex;
+  justify-content: space-between;
+}
+.contacts .contacts__form form .form > div {
+  flex: 0 1 280px;
+}
+.contacts .contacts__form form .form > div input,
+.contacts .contacts__form form .form > div textarea {
+  width: 100%;
+  border: 1px solid black;
+  margin: 0;
+  box-sizing: border-box;
+}
+.contacts .contacts__form form .form .form__text {
+  flex: 0 1 100%;
+  height: 190px;
+}
+.contacts .contacts__form form button {
+  margin: 14px 0 0 0;
+}
+
+.input {
+  flex-flow: column;
+  display: flex;
+  align-items: start;
+  margin: 0 0 5px;
+}
+.input p {
+  position: relative;
+  padding: 0 8px;
+  background: white;
+  top: 10px;
+  left: 12px;
+}
+.input input,
+.input textarea {
+  padding: 14px 20px;
+}
+.input textarea {
+  resize: none;
+  font-family: "Open Sans", sans-serif;
+}
+.input span {
+  color: red;
+  font-weight: 600;
+  padding: 8px 0 0 0;
+  display: none;
 }

@@ -37,8 +37,8 @@
 			</div>
 		</header>
 		<main>
-			<section class="experience">
-				<div class="container container_center">
+			<div class="container container_center">
+				<section class="experience">
 					<div
 						class="experience__text-with-circle text-with-circle_center"
 					>
@@ -46,7 +46,8 @@
 						<h4>Опыт</h4>
 					</div>
 					<h2>Чем я буду полезна</h2>
-					<hr />
+					<!-- <hr /> -->
+					<span class="heading-line_orange"></span>
 					<div class="experience_sections">
 						<div class="experience__education">
 							<div class="experience__line-vertical">
@@ -179,9 +180,86 @@
 							</div>
 						</div>
 					</div>
-				</div>
-			</section>
-			<section></section>
+				</section>
+				<section class="contacts">
+					<img
+						class="contacts__image"
+						src="./assets/contacts.png"
+						alt="contacts"
+					/>
+					<!-- <div class="contacts__image"></div> -->
+					<div class="contacts__form">
+						<div class="text-with-circle">
+							<span class="circle"></span>
+							<h4>Контакты</h4>
+						</div>
+						<h2>Свяжитесь со мной</h2>
+						<span class="heading-line_orange"></span>
+						<h5>Любым удобным для вас способом:</h5>
+						<div class="contacts__form__social-media">
+							<a href="https://www.facebook.com/" target="_blank">
+								<img
+									src="./assets/icons/Facebook2.svg"
+									alt="facebook"
+								/>
+							</a>
+							<a href="https://telegram.org//" target="_blank">
+								<img
+									src="./assets/icons/Telegram.svg"
+									alt="telegram"
+								/>
+							</a>
+							<a
+								href="https://www.instagram.com/"
+								target="_blank"
+							>
+								<img
+									src="./assets/icons/Instagram2.svg"
+									alt="instagram"
+								/>
+							</a>
+						</div>
+						<h5>Или оставьте ваши данные и я сама вам напишу:</h5>
+						<form id="contact-form">
+							<div class="form">
+								<div class="form__info__input input">
+									<p>Ваше имя</p>
+									<input
+										id="form_name"
+										type="text"
+										autofocus
+									/>
+									<span id="form_name_error"
+										>Введите имя!</span
+									>
+								</div>
+								<div class="form__info__input input">
+									<p>Ваша почта</p>
+									<input id="form_email" type="email" />
+									<span id="form_email_error"
+										>Введите почту!</span
+									>
+								</div>
+								<div class="form__text input">
+									<p>Ваше сообщение</p>
+									<textarea
+										id="form_text"
+										rows="20"
+										name=""
+										id=""
+									></textarea>
+									<span id="form_text_error"
+										>Введите текст!</span
+									>
+								</div>
+							</div>
+							<button class="btn btn_orange" type="submit">
+								Отправить сообщение
+							</button>
+						</form>
+					</div>
+				</section>
+			</div>
 		</main>
 
 		<script src="./index.js"></script>
