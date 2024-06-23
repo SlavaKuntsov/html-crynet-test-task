@@ -146,6 +146,7 @@ header .burger-menu-links {
   background: #ffa501;
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
   transform: translateX(-100%);
+  z-index: 20;
 }
 header .burger-menu-links img {
   position: absolute;
@@ -186,13 +187,9 @@ header .burger-menu-links .menu-links li a {
 }
 header .burger-menu-links-open {
   transform: translateX(0);
-  opacity: 1;
-  z-index: 20;
 }
 header .burger-menu-links-close {
   transform: translateX(-100%);
-  opacity: 0;
-  z-index: 0;
 }
 
 .text-with-circle {

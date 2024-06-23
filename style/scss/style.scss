@@ -84,7 +84,6 @@ header {
 		left: 0;
 		width: 100%;
 		height: 100%;
-		// background: #ffa501;
 		background: white;
 		transition: opacity 0.3s ease-in-out;
 	}
@@ -108,6 +107,7 @@ header {
 		background: #ffa501;
 		transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 		transform: translateX(-100%);
+		z-index: 20;
 
 		img {
 			position: absolute;
@@ -154,14 +154,10 @@ header {
 
 	.burger-menu-links-open {
 		transform: translateX(0);
-		opacity: 1;
-		z-index: 20;
 	}
 
 	.burger-menu-links-close {
 		transform: translateX(-100%);
-		opacity: 0;
-		z-index: 0;
 	}
 }
 
