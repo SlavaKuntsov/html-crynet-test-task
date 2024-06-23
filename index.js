@@ -61,3 +61,66 @@ function resetFormValues() {
 	formEmail.value = ''
 	formText.value = ''
 }
+
+const burgerMenu = document.getElementById('burger_menu')
+const burgerMenuBackground = document.getElementById('burger_menu_background')
+const burgerMenuLinks = document.getElementById('burger_menu_links')
+const burgerMenuLinksClose = document.getElementById('burger_menu_links_close')
+
+burgerMenu.addEventListener('click', burger_menu_open)
+burgerMenuLinksClose.addEventListener('click', burger_menu_close)
+
+let isOpened = false
+
+window.onscroll = function () {}
+
+function burger_menu_open() {
+	console.log('open')
+
+
+	if (!isOpened) {
+		isOpened = true
+
+		disableScroll()
+
+		burgerMenuBackground.classList.add('burger-menu-background-open')
+		burgerMenuBackground.classList.remove('burger-menu-background-close')
+
+		burgerMenuLinks.classList.add('burger-menu-links-open')
+		burgerMenuLinks.classList.remove('burger-menu-links-close')
+	}
+}
+
+function burger_menu_close(){
+	
+	console.log('close')
+
+	if(isOpened){
+		isOpened = false
+
+		enableScroll()
+
+		burgerMenuBackground.classList.add('burger-menu-background-close')
+		burgerMenuBackground.classList.remove('burger-menu-background-open')
+
+		burgerMenuLinks.classList.add('burger-menu-links-close')
+		burgerMenuLinks.classList.remove('burger-menu-links-open')
+	}
+}
+
+function disableScroll() {
+	var scrollTop = window.pageYOffset || document.documentElement.scrollTop
+	var scrollLeft = window.pageXOffset || document.documentElement.scrollLeft
+
+	// window.onscroll = function () {
+	// 	window.scrollTo(scrollLeft, scrollTop)
+	// }
+
+	window.onscroll = function () {
+		window.scrollTo(0, 0)
+	}
+}
+
+function enableScroll() {
+	window.onscroll = null
+}

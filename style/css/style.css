@@ -58,6 +58,7 @@ header {
   background-position: center top;
 }
 header .hamburger {
+  cursor: pointer;
   position: absolute;
   top: 0;
   right: 0;
@@ -66,6 +67,7 @@ header .hamburger {
   gap: 6px;
   align-items: end;
   margin: 20px 30px 0 0;
+  z-index: 5;
 }
 header .hamburger .hamburger__line {
   width: 30px;
@@ -82,6 +84,8 @@ header .greeting {
   flex-flow: column;
   display: flex;
   padding: 200px 0 0 0;
+  position: relative;
+  z-index: 5;
 }
 header .greeting h1 {
   margin: 3px 0 25px;
@@ -115,6 +119,80 @@ header .social-media .social-media__icons {
   flex-flow: column-reverse;
   display: flex;
   gap: 15px;
+}
+header .burger-menu-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  transition: opacity 0.3s ease-in-out;
+}
+header .burger-menu-background-open {
+  opacity: 75%;
+  z-index: 10;
+}
+header .burger-menu-background-close {
+  opacity: 0;
+  z-index: 0;
+}
+header .burger-menu-links {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 345px;
+  height: 100%;
+  background: #ffa501;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transform: translateX(-100%);
+}
+header .burger-menu-links img {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  cursor: pointer;
+}
+header .burger-menu-links .menu-links {
+  flex-flow: column;
+  display: flex;
+  gap: 15px;
+  list-style-type: none;
+  margin: 140px 0 0 40px;
+  padding: 0;
+}
+header .burger-menu-links .menu-links li {
+  flex-flow: row;
+  display: flex;
+  gap: 20px;
+  justify-content: start;
+  align-items: center;
+}
+header .burger-menu-links .menu-links li span {
+  display: block;
+  width: 15px;
+  height: 15px;
+  border: 1px solid black;
+  border-radius: 100%;
+  background: transparent;
+}
+header .burger-menu-links .menu-links li a {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 36px;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+header .burger-menu-links-open {
+  transform: translateX(0);
+  opacity: 1;
+  z-index: 20;
+}
+header .burger-menu-links-close {
+  transform: translateX(-100%);
+  opacity: 0;
+  z-index: 0;
 }
 
 .text-with-circle {
@@ -160,7 +238,7 @@ header .social-media .social-media__icons {
 main {
   flex-flow: column;
   display: flex;
-  padding: 0 0 20px 0;
+  padding: 0 0 90px 0;
 }
 main section {
   margin: 120px 0 0 0;
@@ -181,7 +259,7 @@ main section {
   justify-content: space-evenly;
   align-items: center;
   margin: 60px 0 0 0;
-  gap: 20px;
+  gap: 140px;
 }
 .experience .experience_sections .experience__education,
 .experience .experience_sections .experience__work {

@@ -7,6 +7,7 @@ header {
 	background-position: center top;
 
 	.hamburger {
+		cursor: pointer;
 		position: absolute;
 		top: 0;
 		right: 0;
@@ -15,6 +16,7 @@ header {
 		gap: 6px;
 		align-items: end;
 		margin: 20px 30px 0 0;
+		z-index: 5;
 
 		.hamburger__line {
 			width: 30px;
@@ -33,6 +35,8 @@ header {
 		flex-flow: column;
 		display: flex;
 		padding: 200px 0 0 0;
+		position: relative;
+		z-index: 5;
 
 		h1 {
 			margin: 3px 0 25px;
@@ -72,6 +76,92 @@ header {
 			display: flex;
 			gap: 15px;
 		}
+	}
+
+	.burger-menu-background {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		// background: #ffa501;
+		background: white;
+		transition: opacity 0.3s ease-in-out;
+	}
+
+	.burger-menu-background-open {
+		opacity: 75%;
+		z-index: 10;
+	}
+
+	.burger-menu-background-close {
+		opacity: 0;
+		z-index: 0;
+	}
+
+	.burger-menu-links {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 345px;
+		height: 100%;
+		background: #ffa501;
+		transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+		transform: translateX(-100%);
+
+		img {
+			position: absolute;
+			top: 25px;
+			right: 25px;
+			cursor: pointer;
+		}
+
+		.menu-links {
+			flex-flow: column;
+			display: flex;
+			gap: 15px;
+			list-style-type: none;
+			margin: 140px 0 0 40px;
+			padding: 0;
+
+			li {
+				flex-flow: row;
+				display: flex;
+				gap: 20px;
+				justify-content: start;
+				align-items: center;
+
+				span {
+					display: block;
+					width: 15px;
+					height: 15px;
+					border: 1px solid black;
+					border-radius: 100%;
+					background: transparent;
+				}
+
+				a {
+					font-size: 24px;
+					font-weight: 700;
+					line-height: 36px;
+					color: white;
+					text-transform: uppercase;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+
+	.burger-menu-links-open {
+		transform: translateX(0);
+		opacity: 1;
+		z-index: 20;
+	}
+
+	.burger-menu-links-close {
+		transform: translateX(-100%);
+		opacity: 0;
+		z-index: 0;
 	}
 }
 
@@ -119,7 +209,7 @@ header {
 main {
 	flex-flow: column;
 	display: flex;
-	padding: 0 0 20px 0;
+	padding: 0 0 90px 0;
 
 	section {
 		margin: 120px 0 0 0;
@@ -141,7 +231,7 @@ main {
 		justify-content: space-evenly;
 		align-items: center;
 		margin: 60px 0 0 0;
-		gap: 20px;
+		gap: 140px;
 
 		.experience__education,
 		.experience__work {
@@ -353,7 +443,7 @@ main {
 		font-family: 'Open Sans', sans-serif;
 	}
 
-	span{
+	span {
 		color: red;
 		font-weight: 600;
 		padding: 8px 0 0 0;
