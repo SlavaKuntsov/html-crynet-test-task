@@ -206,6 +206,7 @@ main {
 	flex-flow: column;
 	display: flex;
 	padding: 0 0 90px 0;
+	z-index: 5;
 
 	section {
 		margin: 120px 0 0 0;
@@ -444,5 +445,159 @@ main {
 		font-weight: 600;
 		padding: 8px 0 0 0;
 		display: none;
+	}
+}
+
+@media screen and (width <= 1400px) {
+	header {
+		.greeting {
+			padding: 200px 0 0 100px;
+		}
+		.social-media {
+			top: 160px;
+			left: 30px;
+		}
+	}
+
+	main {
+		section {
+			margin: 80px 0 0 0;
+		}
+	}
+
+	.experience {
+		.experience_sections {
+			gap: 70px;
+			.experience__education__text {
+				.element-text {
+					width: 315px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (width <= 900px) {
+	header {
+		.hamburger {
+			gap: 4px;
+
+			.hamburger__line {
+				width: 25px;
+				height: 3px;
+			}
+			.line_short {
+				width: 25px;
+			}
+			.line_long {
+				width: 30px;
+			}
+		}
+		.greeting {
+			padding: 200px 0 0 0;
+		}
+		.social-media {
+			top: 160px;
+			left: 30px;
+		}
+	}
+
+	main {
+		section {
+			margin: 80px 0 0 0;
+		}
+	}
+
+	.experience {
+		.experience_sections {
+			gap: 40px;
+			flex-flow: column;
+			margin: 40px 0 0 0;
+
+			.experience__education__text {
+				.element-text {
+					width: 315px;
+				}
+			}
+		}
+	}
+
+	.contacts {
+		img.contacts__image {
+			display: none;
+		}
+
+		.contacts__form {
+			form {
+				.form {
+					& > div {
+						flex: 0 1 auto;
+						min-width: 500px;
+
+						input,
+						textarea {
+							width: 100%;
+							border: 1px solid black;
+							margin: 0;
+							box-sizing: border-box;
+						}
+					}
+				}
+			}
+
+			.contacts__form__social-media {
+				img {
+					width: 25px;
+				}
+			}
+
+			h5 {
+				padding: 15px 0;
+			}
+		}
+	}
+}
+
+@media screen and (width <= 800px) {
+	header {
+		height: 640px;
+
+		.social-media {
+			display: none;
+		}
+	}
+}
+
+@media screen and (width <= 700px) {
+	header {
+		.greeting {
+			padding: 200px 20px 0;
+
+			h1 {
+				margin: 3px 0 30px 0;
+			}
+		}
+	}
+
+	.contacts {
+		padding: 0 20px;
+		.contacts__form {
+			form {
+				.form {
+					& > div {
+						flex: 0 1 auto;
+						width: 100%;
+
+						input,
+						textarea {
+							width: 100%;
+							border: 1px solid black;
+							margin: 0;
+							box-sizing: border-box;
+						}
+					}
+				}
+			}
+		}
 	}
 }

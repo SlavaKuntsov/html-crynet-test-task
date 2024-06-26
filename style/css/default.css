@@ -2,6 +2,7 @@
 body {
   margin: 0;
   font-family: "Open Sans", sans-serif;
+  overflow-x: hidden;
 }
 body h1,
 body h2,
@@ -34,7 +35,9 @@ body button {
   font-size: 14px;
   line-height: 21px;
 }
-body p, body input, body textarea {
+body p,
+body input,
+body textarea {
   font-size: 12px;
   font-weight: 500;
   line-height: 18px;
@@ -49,4 +52,145 @@ body p, body input, body textarea {
 
 .container_center {
   text-align: center;
+}
+
+@media screen and (width <= 1200px) {
+  .container {
+    width: 900px;
+  }
+}
+@media screen and (width <= 900px) {
+  .container {
+    width: 600px;
+  }
+  body h1,
+  body h2,
+  body h3,
+  body h4,
+  body h5,
+  body button {
+    font-weight: 700;
+    padding: 0;
+    margin: 0;
+  }
+  body h1 {
+    font-size: 36px;
+    line-height: 45px;
+  }
+  body h2 {
+    font-size: 20px;
+    line-height: 45px;
+  }
+  body h3 {
+    font-size: 16px;
+    line-height: 25px;
+  }
+  body h4 {
+    font-size: 14px;
+    line-height: 25px;
+  }
+  body h5,
+  body button {
+    font-size: 12px;
+    line-height: 21px;
+  }
+  body p,
+  body input,
+  body textarea {
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 18px;
+    padding: 0;
+    margin: 0;
+  }
+}
+@media screen and (width <= 700px) {
+  .container {
+    width: 600px;
+  }
+  body h1,
+  body h2,
+  body h3,
+  body h4,
+  body h5,
+  body button {
+    font-weight: 700;
+    padding: 0;
+    margin: 0;
+  }
+  body h1 {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  body h2 {
+    font-size: 18px;
+    line-height: 40px;
+  }
+  body h3 {
+    font-size: 16px;
+    line-height: 25px;
+  }
+  body h4 {
+    font-size: 14px;
+    line-height: 25px;
+  }
+  body h5,
+  body button {
+    font-size: 12px;
+    line-height: 21px;
+  }
+  body p,
+  body input,
+  body textarea {
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 18px;
+    padding: 0;
+    margin: 0;
+  }
+}
+@media screen and (width <= 500px) {
+  .container {
+    width: 600px;
+  }
+  body h1,
+  body h2,
+  body h3,
+  body h4,
+  body h5,
+  body button {
+    font-weight: 700;
+    padding: 0;
+    margin: 0;
+  }
+  body h1 {
+    font-size: 26px;
+    line-height: 39px;
+  }
+  body h2 {
+    font-size: 20px;
+    line-height: 60px;
+  }
+  body h3 {
+    font-size: 18px;
+    line-height: 30px;
+  }
+  body h4 {
+    font-size: 16px;
+    line-height: 30px;
+  }
+  body h5,
+  body button {
+    font-size: 14px;
+    line-height: 21px;
+  }
+  body p,
+  body input,
+  body textarea {
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 18px;
+    padding: 0;
+    margin: 0;
+  }
 }

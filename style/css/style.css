@@ -2,6 +2,7 @@
 body {
   margin: 0;
   font-family: "Open Sans", sans-serif;
+  overflow-x: hidden;
 }
 body h1,
 body h2,
@@ -34,7 +35,9 @@ body button {
   font-size: 14px;
   line-height: 21px;
 }
-body p, body input, body textarea {
+body p,
+body input,
+body textarea {
   font-size: 12px;
   font-weight: 500;
   line-height: 18px;
@@ -51,6 +54,146 @@ body p, body input, body textarea {
   text-align: center;
 }
 
+@media screen and (width <= 1200px) {
+  .container {
+    width: 900px;
+  }
+}
+@media screen and (width <= 900px) {
+  .container {
+    width: 600px;
+  }
+  body h1,
+  body h2,
+  body h3,
+  body h4,
+  body h5,
+  body button {
+    font-weight: 700;
+    padding: 0;
+    margin: 0;
+  }
+  body h1 {
+    font-size: 36px;
+    line-height: 45px;
+  }
+  body h2 {
+    font-size: 20px;
+    line-height: 45px;
+  }
+  body h3 {
+    font-size: 16px;
+    line-height: 25px;
+  }
+  body h4 {
+    font-size: 14px;
+    line-height: 25px;
+  }
+  body h5,
+  body button {
+    font-size: 12px;
+    line-height: 21px;
+  }
+  body p,
+  body input,
+  body textarea {
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 18px;
+    padding: 0;
+    margin: 0;
+  }
+}
+@media screen and (width <= 700px) {
+  .container {
+    width: 600px;
+  }
+  body h1,
+  body h2,
+  body h3,
+  body h4,
+  body h5,
+  body button {
+    font-weight: 700;
+    padding: 0;
+    margin: 0;
+  }
+  body h1 {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  body h2 {
+    font-size: 18px;
+    line-height: 40px;
+  }
+  body h3 {
+    font-size: 16px;
+    line-height: 25px;
+  }
+  body h4 {
+    font-size: 14px;
+    line-height: 25px;
+  }
+  body h5,
+  body button {
+    font-size: 12px;
+    line-height: 21px;
+  }
+  body p,
+  body input,
+  body textarea {
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 18px;
+    padding: 0;
+    margin: 0;
+  }
+}
+@media screen and (width <= 500px) {
+  .container {
+    width: 600px;
+  }
+  body h1,
+  body h2,
+  body h3,
+  body h4,
+  body h5,
+  body button {
+    font-weight: 700;
+    padding: 0;
+    margin: 0;
+  }
+  body h1 {
+    font-size: 26px;
+    line-height: 39px;
+  }
+  body h2 {
+    font-size: 20px;
+    line-height: 60px;
+  }
+  body h3 {
+    font-size: 18px;
+    line-height: 30px;
+  }
+  body h4 {
+    font-size: 16px;
+    line-height: 30px;
+  }
+  body h5,
+  body button {
+    font-size: 14px;
+    line-height: 21px;
+  }
+  body p,
+  body input,
+  body textarea {
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 18px;
+    padding: 0;
+    margin: 0;
+  }
+}
 header {
   height: 800px;
   background: url("../../assets/image.png") no-repeat;
@@ -236,6 +379,7 @@ main {
   flex-flow: column;
   display: flex;
   padding: 0 0 90px 0;
+  z-index: 5;
 }
 main section {
   margin: 120px 0 0 0;
@@ -442,4 +586,106 @@ main section {
   font-weight: 600;
   padding: 8px 0 0 0;
   display: none;
+}
+
+@media screen and (width <= 1400px) {
+  header .greeting {
+    padding: 200px 0 0 100px;
+  }
+  header .social-media {
+    top: 160px;
+    left: 30px;
+  }
+  main section {
+    margin: 80px 0 0 0;
+  }
+  .experience .experience_sections {
+    gap: 70px;
+  }
+  .experience .experience_sections .experience__education__text .element-text {
+    width: 315px;
+  }
+}
+@media screen and (width <= 900px) {
+  header .hamburger {
+    gap: 4px;
+  }
+  header .hamburger .hamburger__line {
+    width: 25px;
+    height: 3px;
+  }
+  header .hamburger .line_short {
+    width: 25px;
+  }
+  header .hamburger .line_long {
+    width: 30px;
+  }
+  header .greeting {
+    padding: 200px 0 0 0;
+  }
+  header .social-media {
+    top: 160px;
+    left: 30px;
+  }
+  main section {
+    margin: 80px 0 0 0;
+  }
+  .experience .experience_sections {
+    gap: 40px;
+    flex-flow: column;
+    margin: 40px 0 0 0;
+  }
+  .experience .experience_sections .experience__education__text .element-text {
+    width: 315px;
+  }
+  .contacts img.contacts__image {
+    display: none;
+  }
+  .contacts .contacts__form form .form > div {
+    flex: 0 1 auto;
+    min-width: 500px;
+  }
+  .contacts .contacts__form form .form > div input,
+  .contacts .contacts__form form .form > div textarea {
+    width: 100%;
+    border: 1px solid black;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  .contacts .contacts__form .contacts__form__social-media img {
+    width: 25px;
+  }
+  .contacts .contacts__form h5 {
+    padding: 15px 0;
+  }
+}
+@media screen and (width <= 800px) {
+  header {
+    height: 640px;
+  }
+  header .social-media {
+    display: none;
+  }
+}
+@media screen and (width <= 700px) {
+  header .greeting {
+    padding: 200px 20px 0;
+  }
+  header .greeting h1 {
+    margin: 3px 0 30px 0;
+  }
+  .contacts {
+    padding: 0 20px;
+  }
+  .contacts .contacts__form form .form > div {
+    flex: 0 1 auto;
+    width: 100%;
+  }
+  .contacts .contacts__form form .form > div input,
+  .contacts .contacts__form form .form > div textarea {
+    width: 100%;
+    border: 1px solid black;
+    margin: 0;
+    box-sizing: border-box;
+  }
 }

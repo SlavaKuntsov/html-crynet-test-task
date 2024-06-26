@@ -1,11 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
-
-
-
 body {
 	margin: 0;
 	font-family: 'Open Sans', sans-serif;
+	overflow-x: hidden;
 
 	h1,
 	h2,
@@ -38,7 +36,9 @@ body {
 		font-size: 14px;
 		line-height: 21px;
 	}
-	p, input, textarea {
+	p,
+	input,
+	textarea {
 		font-size: 12px;
 		font-weight: 500;
 		line-height: 18px;
@@ -54,4 +54,157 @@ body {
 
 .container_center {
 	text-align: center;
+}
+
+@media screen and (width <= 1200px) {
+	.container {
+		width: 900px;
+	}
+}
+
+@media screen and (width <= 900px) {
+	.container {
+		width: 600px;
+	}
+
+	body {
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		button {
+			font-weight: 700;
+			padding: 0;
+			margin: 0;
+		}
+		h1 {
+			font-size: 36px;
+			line-height: 45px;
+		}
+		h2 {
+			font-size: 20px;
+			line-height: 45px;
+		}
+		h3 {
+			font-size: 16px;
+			line-height: 25px;
+		}
+		h4 {
+			font-size: 14px;
+			line-height: 25px;
+		}
+		h5,
+		button {
+			font-size: 12px;
+			line-height: 21px;
+		}
+		p,
+		input,
+		textarea {
+			font-size: 10px;
+			font-weight: 500;
+			line-height: 18px;
+			padding: 0;
+			margin: 0;
+		}
+	}
+}
+
+@media screen and (width <= 700px) {
+	.container {
+		width: 600px;
+	}
+
+	body {
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		button {
+			font-weight: 700;
+			padding: 0;
+			margin: 0;
+		}
+		h1 {
+			font-size: 30px;
+			line-height: 40px;
+		}
+		h2 {
+			font-size: 18px;
+			line-height: 40px;
+		}
+		h3 {
+			font-size: 16px;
+			line-height: 25px;
+		}
+		h4 {
+			font-size: 14px;
+			line-height: 25px;
+		}
+		h5,
+		button {
+			font-size: 12px;
+			line-height: 21px;
+		}
+		p,
+		input,
+		textarea {
+			font-size: 10px;
+			font-weight: 500;
+			line-height: 18px;
+			padding: 0;
+			margin: 0;
+		}
+	}
+}
+
+@media screen and (width <= 500px) {
+	.container {
+		width: 600px;
+	}
+
+	body {
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		button {
+			font-weight: 700;
+			padding: 0;
+			margin: 0;
+		}
+		h1 {
+			font-size: 26px;
+			line-height: 39px;
+		}
+		h2 {
+			font-size: 20px;
+			line-height: 60px;
+		}
+		h3 {
+			font-size: 18px;
+			line-height: 30px;
+		}
+		h4 {
+			font-size: 16px;
+			line-height: 30px;
+		}
+		h5,
+		button {
+			font-size: 14px;
+			line-height: 21px;
+		}
+		p,
+		input,
+		textarea {
+			font-size: 10px;
+			font-weight: 500;
+			line-height: 18px;
+			padding: 0;
+			margin: 0;
+		}
+	}
 }
