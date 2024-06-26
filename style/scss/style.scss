@@ -36,7 +36,7 @@ header {
 		display: flex;
 		padding: 200px 0 0 0;
 		position: relative;
-		z-index: 5;
+		// z-index: 5;
 
 		h1 {
 			margin: 3px 0 25px;
@@ -108,8 +108,11 @@ header {
 		transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 		transform: translateX(-100%);
 		z-index: 20;
+		flex-flow: column;
+		display: flex;
+		justify-content: space-between;
 
-		img {
+		#burger_menu_links_close {
 			position: absolute;
 			top: 25px;
 			right: 25px;
@@ -148,6 +151,17 @@ header {
 					text-transform: uppercase;
 					text-decoration: none;
 				}
+			}
+		}
+
+		.burger-menu-links__social-media {
+			flex-flow: row;
+			display: flex;
+			gap: 15px;
+			margin: 0 auto 50px;
+
+			img {
+				width: 20px;
 			}
 		}
 	}
@@ -207,6 +221,7 @@ main {
 	display: flex;
 	padding: 0 0 90px 0;
 	z-index: 5;
+	position: relative;
 
 	section {
 		margin: 120px 0 0 0;
@@ -384,6 +399,10 @@ main {
 			justify-content: center;
 			align-items: start;
 
+			.contact-form__privacy-policy {
+				display: none;
+			}
+
 			.form {
 				width: 100%;
 				flex-flow: wrap;
@@ -479,20 +498,20 @@ main {
 
 @media screen and (width <= 900px) {
 	header {
-		.hamburger {
-			gap: 4px;
+		// .hamburger {
+		// 	gap: 4px;
 
-			.hamburger__line {
-				width: 25px;
-				height: 3px;
-			}
-			.line_short {
-				width: 25px;
-			}
-			.line_long {
-				width: 30px;
-			}
-		}
+		// 	.hamburger__line {
+		// 		width: 25px;
+		// 		height: 3px;
+		// 	}
+		// 	.line_short {
+		// 		width: 25px;
+		// 	}
+		// 	.line_long {
+		// 		width: 30px;
+		// 	}
+		// }
 		.greeting {
 			padding: 200px 0 0 0;
 		}
@@ -570,8 +589,14 @@ main {
 
 @media screen and (width <= 700px) {
 	header {
+		background-position: calc(50% - 80px);
+
+		.hamburger {
+			margin: 20px 20px 0 0;
+		}
+
 		.greeting {
-			padding: 200px 20px 0;
+			padding: 200px 10px 0;
 
 			h1 {
 				margin: 3px 0 30px 0;
@@ -579,14 +604,42 @@ main {
 		}
 	}
 
+	main {
+		section {
+			margin: 40px 0 0 0;
+		}
+	}
+
+	.experience {
+		h2 {
+			margin: 0;
+		}
+
+		.experience_sections {
+			gap: 40px;
+			flex-flow: column;
+			margin: 40px 10px 0;
+
+			.experience__education__text {
+				.element-text {
+					display: inline;
+					width: 80%;
+				}
+			}
+		}
+	}
+
 	.contacts {
 		padding: 0 20px;
+		text-align: start;
+
 		.contacts__form {
 			form {
 				.form {
 					& > div {
 						flex: 0 1 auto;
-						width: 100%;
+						max-width: 100%;
+						min-width: 100%;
 
 						input,
 						textarea {
@@ -595,6 +648,19 @@ main {
 							margin: 0;
 							box-sizing: border-box;
 						}
+					}
+				}
+
+				.contact-form__privacy-policy {
+					flex-flow: row;
+					display: flex;
+					gap: 12px;
+					align-items: center;
+					justify-content: center;
+					margin: 20px auto;
+
+					span{
+						color: blue;
 					}
 				}
 			}

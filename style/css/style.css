@@ -97,7 +97,7 @@ body textarea {
   body p,
   body input,
   body textarea {
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 500;
     line-height: 18px;
     padding: 0;
@@ -106,7 +106,7 @@ body textarea {
 }
 @media screen and (width <= 700px) {
   .container {
-    width: 600px;
+    width: 500px;
   }
   body h1,
   body h2,
@@ -142,7 +142,7 @@ body textarea {
   body p,
   body input,
   body textarea {
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 500;
     line-height: 18px;
     padding: 0;
@@ -151,7 +151,7 @@ body textarea {
 }
 @media screen and (width <= 500px) {
   .container {
-    width: 600px;
+    width: 100%;
   }
   body h1,
   body h2,
@@ -177,7 +177,7 @@ body textarea {
   }
   body h4 {
     font-size: 16px;
-    line-height: 30px;
+    line-height: 24px;
   }
   body h5,
   body button {
@@ -187,7 +187,7 @@ body textarea {
   body p,
   body input,
   body textarea {
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 500;
     line-height: 18px;
     padding: 0;
@@ -228,7 +228,6 @@ header .greeting {
   display: flex;
   padding: 200px 0 0 0;
   position: relative;
-  z-index: 5;
 }
 header .greeting h1 {
   margin: 3px 0 25px;
@@ -290,8 +289,11 @@ header .burger-menu-links {
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
   transform: translateX(-100%);
   z-index: 20;
+  flex-flow: column;
+  display: flex;
+  justify-content: space-between;
 }
-header .burger-menu-links img {
+header .burger-menu-links #burger_menu_links_close {
   position: absolute;
   top: 25px;
   right: 25px;
@@ -327,6 +329,15 @@ header .burger-menu-links .menu-links li a {
   color: white;
   text-transform: uppercase;
   text-decoration: none;
+}
+header .burger-menu-links .burger-menu-links__social-media {
+  flex-flow: row;
+  display: flex;
+  gap: 15px;
+  margin: 0 auto 50px;
+}
+header .burger-menu-links .burger-menu-links__social-media img {
+  width: 20px;
 }
 header .burger-menu-links-open {
   transform: translateX(0);
@@ -380,6 +391,7 @@ main {
   display: flex;
   padding: 0 0 90px 0;
   z-index: 5;
+  position: relative;
 }
 main section {
   margin: 120px 0 0 0;
@@ -536,6 +548,9 @@ main section {
   justify-content: center;
   align-items: start;
 }
+.contacts .contacts__form form .contact-form__privacy-policy {
+  display: none;
+}
 .contacts .contacts__form form .form {
   width: 100%;
   flex-flow: wrap;
@@ -607,19 +622,6 @@ main section {
   }
 }
 @media screen and (width <= 900px) {
-  header .hamburger {
-    gap: 4px;
-  }
-  header .hamburger .hamburger__line {
-    width: 25px;
-    height: 3px;
-  }
-  header .hamburger .line_short {
-    width: 25px;
-  }
-  header .hamburger .line_long {
-    width: 30px;
-  }
   header .greeting {
     padding: 200px 0 0 0;
   }
@@ -668,18 +670,41 @@ main section {
   }
 }
 @media screen and (width <= 700px) {
+  header {
+    background-position: calc(50% - 80px);
+  }
+  header .hamburger {
+    margin: 20px 20px 0 0;
+  }
   header .greeting {
-    padding: 200px 20px 0;
+    padding: 200px 10px 0;
   }
   header .greeting h1 {
     margin: 3px 0 30px 0;
   }
+  main section {
+    margin: 40px 0 0 0;
+  }
+  .experience h2 {
+    margin: 0;
+  }
+  .experience .experience_sections {
+    gap: 40px;
+    flex-flow: column;
+    margin: 40px 10px 0;
+  }
+  .experience .experience_sections .experience__education__text .element-text {
+    display: inline;
+    width: 80%;
+  }
   .contacts {
     padding: 0 20px;
+    text-align: start;
   }
   .contacts .contacts__form form .form > div {
     flex: 0 1 auto;
-    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
   }
   .contacts .contacts__form form .form > div input,
   .contacts .contacts__form form .form > div textarea {
@@ -687,5 +712,16 @@ main section {
     border: 1px solid black;
     margin: 0;
     box-sizing: border-box;
+  }
+  .contacts .contacts__form form .contact-form__privacy-policy {
+    flex-flow: row;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+  }
+  .contacts .contacts__form form .contact-form__privacy-policy span {
+    color: blue;
   }
 }

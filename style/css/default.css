@@ -97,7 +97,7 @@ body textarea {
   body p,
   body input,
   body textarea {
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 500;
     line-height: 18px;
     padding: 0;
@@ -106,7 +106,7 @@ body textarea {
 }
 @media screen and (width <= 700px) {
   .container {
-    width: 600px;
+    width: 500px;
   }
   body h1,
   body h2,
@@ -142,7 +142,7 @@ body textarea {
   body p,
   body input,
   body textarea {
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 500;
     line-height: 18px;
     padding: 0;
@@ -151,7 +151,7 @@ body textarea {
 }
 @media screen and (width <= 500px) {
   .container {
-    width: 600px;
+    width: 100%;
   }
   body h1,
   body h2,
@@ -177,7 +177,7 @@ body textarea {
   }
   body h4 {
     font-size: 16px;
-    line-height: 30px;
+    line-height: 24px;
   }
   body h5,
   body button {
@@ -187,7 +187,7 @@ body textarea {
   body p,
   body input,
   body textarea {
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 500;
     line-height: 18px;
     padding: 0;
